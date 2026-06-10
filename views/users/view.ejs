@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<div class="container my-5">
+    <div class="card shadow-sm mx-auto" style="max-width: 700px;">
+      <div class="card-body p-4" style="position:relative">
+        
+        <h2 class="card-title mb-1"><%= user.first_name %> <%= user.last_name %></h2>
+        <p class="text-muted mb-4">User Reference ID: #<%= user.id %></p>
+        
+        <p class="card-text fs-5"><b>Email:</b> <a href="mailto:<%= user.email %>"><%= user.email %></a></p>
+        
+        <% if(user.id % 2 == 0) { %>
+             <div style="position:absolute; right: 24px; top: 24px;">
+                 <img class="rounded-circle border" src="https://randomuser.me/api/portraits/men/<%= user.id %>.jpg" alt="Profile Avatar" width="120">
+             </div>
+        <% } else { %>
+             <div style="position:absolute; right: 24px; top: 24px;">
+                 <img class="rounded-circle border" src="https://randomuser.me/api/portraits/women/<%= user.id %>.jpg" alt="Profile Avatar" width="120">
+             </div>
+        <% } %>
+        
+        <div class="mt-4 w-75">
+            <p class="card-text"><b>Bio:</b> I'm baby blog disrupt hoodie gochujang, blue bottle bruh vegan williamsburg pug. Biodiesel hoodie typewriter, bitters tacos meggings master cleanse yr post-ironic try-hard 90's? Pop-up copper mug grailed bushwick selvage, yes plz semiotics!</p>
+            <p>Hella truffaut tote bag, biodiesel glossier organic live-edge man bun mixtape. Mukbang bushwick copper mug 3 wolf moon.</p>
+        </div>
+        
+        <div class="mt-4 pt-3 border-top">
+            <a href="/users" class="btn btn-outline-primary">Back to Users</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

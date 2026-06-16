@@ -45,6 +45,12 @@ app.get('/gallery', (req, res) => {
     res.render('pages/gallery', { 'title': title });
 });
 
+app.get('/futuring', (req, res) => {
+    let title = "Strategic Foresight";
+    res.render('pages/futuring', { 'title': title });
+});
+
+
 
 // ==========================================
 // 👥 NEW ROUTE: The User Directory (The List)

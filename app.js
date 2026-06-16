@@ -40,6 +40,12 @@ app.get('/contact',(req,res)=>{
     res.render('pages/contact',{'title': title});
 });
 
+app.get('/gallery', (req, res) => {
+    let title = "My Project Gallery";
+    res.render('pages/gallery', { 'title': title });
+});
+
+
 // ==========================================
 // 👥 NEW ROUTE: The User Directory (The List)
 // ==========================================

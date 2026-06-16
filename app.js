@@ -55,6 +55,10 @@ app.get('/outcomes', (req, res) => {
     res.render('pages/outcomes', { 'title': title });
 });
 
+app.get('/blog', (req, res) => {
+    let title = "My Blog";
+    res.render('pages/blog', { 'title': title });
+});
 
 
 // ==========================================

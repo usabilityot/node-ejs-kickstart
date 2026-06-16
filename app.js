@@ -50,6 +50,11 @@ app.get('/futuring', (req, res) => {
     res.render('pages/futuring', { 'title': title });
 });
 
+app.get('/outcomes', (req, res) => {
+    let title = "Desired outcomes";
+    res.render('pages/outcomes', { 'title': title });
+});
+
 
 
 // ==========================================
